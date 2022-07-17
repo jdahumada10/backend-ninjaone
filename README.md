@@ -7,6 +7,10 @@ Solution to [NinjaOne Assessment](https://github.com/NinjaRMM/backend-interview-
 1. Get Gradle dependencies
 2. Run the BackendInterviewProjectApplication class, setting the active profile to development
 
+## Database
+
+![alt text](https://github.com/jdahumada10/backend-ninjaone/blob/main/Database.jpg?raw=true)
+
 ## API Documentation
 
 You can import the requests collection to postman with this [JSON Link](https://www.getpostman.com/collections/b5c8173d4f1c1fcc9636)
