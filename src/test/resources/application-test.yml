@@ -1,3 +1,8 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:test_db
+    url: jdbc:h2:file:/Users/juan/Documents/NinjaDB
+
+# Security enable/disable
+security:
+  basic:
+    enabled: false

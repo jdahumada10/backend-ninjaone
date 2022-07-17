@@ -3,6 +3,9 @@ package com.ninjaone.backendinterviewproject.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ninjaone.backendinterviewproject.BackendInterviewProjectApplication;
 import com.ninjaone.backendinterviewproject.model.Sample;
+import com.ninjaone.backendinterviewproject.security.ApplicationSecurity;
+import com.ninjaone.backendinterviewproject.security.JwtTokenFilter;
+import com.ninjaone.backendinterviewproject.security.JwtTokenUtil;
 import com.ninjaone.backendinterviewproject.service.SampleService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,6 +16,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
@@ -27,11 +31,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {BackendInterviewProjectApplication.class})
+@ContextConfiguration(classes = {BackendInterviewProjectApplication.class, ApplicationSecurity.class, JwtTokenFilter.class, JwtTokenUtil.class})
 @WebMvcTest(SampleController.class)
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 @AutoConfigureDataJpa
-public class SampleControllerTest {
+@ActiveProfiles(value = "test")
+class SampleControllerTest {
     public static final String ID = "12345";
 
     @Autowired

@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class SampleServiceTest {
+class SampleServiceTest {
     public static final String ID = "12345";
 
     @Mock
