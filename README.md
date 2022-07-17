@@ -1,6 +1,6 @@
 # NinjaOne Backend Interview Project - Solution
 
-Solution to [NinjaOne Assessment](https://github.com/NinjaRMM/backend-interview-project-app-template). The project will create a database schema with all the requirements and following the best practices. It al so has Spring Security with JWT and Unit Tests.
+Solution to [NinjaOne Assessment](https://github.com/NinjaRMM/backend-interview-project-app-template). The project will create a database schema with all the requirements and following the best practices. It also has Spring Security with roles,JWT and Unit Tests.
 
 ## Starting the Application
 
